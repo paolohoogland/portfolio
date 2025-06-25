@@ -1,14 +1,13 @@
 const Experience = () => {
     return (
-        <div class="section">
-            <div class="sectionHeader">
-                <h2>experience</h2>
+        <div className="section">
+            <div className="sectionHeader">
+                <h2>experience_</h2>
             </div>
-            <div class="sectionBody">
-                <div class="experienceList">
-                    <button></button>
+            <div className="sectionBody">
+                <div className="experienceList">
                 </div>
-                <div class="experienceDetails">
+                <div className="experienceDetails">
 
                 </div>
             </div>
