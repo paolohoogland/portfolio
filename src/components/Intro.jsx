@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 
-
 const Intro = () => {
     const surname = "hoogland_";
     const surnamePhonetic = "/'ho:x.lɑnt/";
