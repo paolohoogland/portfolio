@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 
 const Intro = () => {
     const surname = "hoogland_";
@@ -16,10 +17,22 @@ const Intro = () => {
     return (
         <div className="section">
             <div className="sectionHeader">
-                <h1>hello, I'm paolo {showPhonetic ? surnamePhonetic : surname}</h1>
+                <motion.h1
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                >
+                    hello, I'm paolo {showPhonetic ? surnamePhonetic : surname}
+                </motion.h1>
             </div>
             <div className="sectionBody">
-                <p>I'm a computer science engineer always up for a challenge.</p>
+                <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
+                >
+                    I'm a computer science engineer always up for a challenge.
+                </motion.p>
             </div>
         </div>
     )

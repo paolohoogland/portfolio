@@ -36,6 +36,13 @@ section {
     width: 100%;
 }
 
+/* intro section */
+
+.sectionHeader h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
 /* about section */
 
 #info {
@@ -54,5 +61,14 @@ section {
     }
 
 /* experience */
+
+.expList {
+  flex: 0 0 25%;
+}
+
+.expDetails {
+  flex: 0 0 75%;
+}
+
 
 /* projects */
