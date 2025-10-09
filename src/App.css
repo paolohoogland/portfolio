@@ -31,11 +31,12 @@ html {
 }
 
 body {
-    padding-top: 80px;
     color: white;
     background-color: #0f0b1a;
     text-align: justify;
     font-family: 'MyFont', sans-serif;
+    padding-top: 0%;
+    
 }
 
 /* global classes */

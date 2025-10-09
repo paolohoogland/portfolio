@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Intro = () => {
     const surname = "Hoogland_";
@@ -9,7 +9,7 @@ const Intro = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setShowPhonetic(prev => !prev);
-        }, 2000); 
+        }, 4000); 
 
         return () => clearInterval(interval);
     }, []);
@@ -17,13 +17,21 @@ const Intro = () => {
     return (
         <div className="section">
             <div className="sectionHeader">
-                <motion.h1
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                >
-                    Hello, I'm Paolo {showPhonetic ? surnamePhonetic : surname}
-                </motion.h1>
+                <h1>
+                    Hello, I'm Paolo{" "}
+                    <AnimatePresence mode='wait'>
+                        <motion.span
+                            key={showPhonetic ? 'phonetic' : 'surname'}
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -30 }}
+                            transition={{ duration: 0.8, ease: "easeOut" }}
+                            style={{ display: 'inline-block' }}
+                        >
+                            {showPhonetic ? surnamePhonetic : surname}
+                        </motion.span>
+                    </AnimatePresence>
+                </h1>
             </div>
             <div className="sectionBody">
                 <motion.p
