@@ -5,12 +5,12 @@ main {
     justify-content: center;
 }
 
-nav {
+/* nav {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-}
+} */
 
 img {
     max-width: 35px;
@@ -26,6 +26,16 @@ section {
     max-width: 65%;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding-top: 80px;
+    color: white;
+    background-color: #0f0b1a;
+}
+
 /* global classes */
 
 .sectionBody {
@@ -35,6 +45,51 @@ section {
     justify-content: center;
     width: 100%;
 }
+
+h1, h2 {
+    color: #a100f2;
+}
+
+/* navbar */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem 2rem;
+    z-index: 1000;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background-color: #0f0b1a;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #a100f2;
+} 
+
+.nav-divider {
+    flex-grow: 1;
+}
+
+.nav-socials {
+    display: flex;
+    gap: 1rem;
+}
+
 
 /* intro section */
 
@@ -53,6 +108,15 @@ section {
     text-align: center;
     width: 70%;
     margin-right: 10%;
+}
+
+#info a {
+    color: #a100f2;
+    text-decoration: none;
+}
+
+#info a:hover {
+    text-decoration: underline;
 }
 
 #myPic img {
