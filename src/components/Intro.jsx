@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 const Intro = () => {
-    const surname = "hoogland_";
-    const surnamePhonetic = "/'ho:x.lɑnt/";
+    const surname = "Hoogland_";
+    const surnamePhonetic = "/'ho:x.lɑnt/_";
     const [showPhonetic, setShowPhonetic] = useState(false);
 
     useEffect(() => {
@@ -22,7 +22,7 @@ const Intro = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
-                    hello, I'm paolo {showPhonetic ? surnamePhonetic : surname}
+                    Hello, I'm Paolo {showPhonetic ? surnamePhonetic : surname}
                 </motion.h1>
             </div>
             <div className="sectionBody">

@@ -5,12 +5,12 @@ main {
     justify-content: center;
 }
 
-/* nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-} */
+@font-face {
+  font-family: 'MyFont';
+  src: url('./src/assets/fonts/AlteHaasGroteskRegular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 img {
     max-width: 35px;
@@ -34,6 +34,8 @@ body {
     padding-top: 80px;
     color: white;
     background-color: #0f0b1a;
+    text-align: justify;
+    font-family: 'MyFont', sans-serif;
 }
 
 /* global classes */
@@ -48,6 +50,22 @@ body {
 
 h1, h2 {
     color: #a100f2;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+p, li {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
 }
 
 /* navbar */
@@ -94,7 +112,7 @@ h1, h2 {
 /* intro section */
 
 .sectionHeader h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: bold;
 }
 
@@ -111,12 +129,8 @@ h1, h2 {
 }
 
 #info a {
-    color: #a100f2;
+    color: #b55aff;
     text-decoration: none;
-}
-
-#info a:hover {
-    text-decoration: underline;
 }
 
 #myPic img {
@@ -134,5 +148,50 @@ h1, h2 {
   flex: 0 0 75%;
 }
 
+.expButton {
+    background-color: #1a122b;
+    color: white;
+    border: 2px solid #a100f2;
+    border-radius: 12px;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 0.4rem 0;
+    width: 180px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.expButton:hover {
+    background-color: #a100f2;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.expButton.active {
+    background-color: #b55aff;
+    color: white;
+    border-color: #b55aff;
+}
+
+.pp {
+    color: #b55aff;
+    font-weight: bold;
+}
+
+.expList {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 1rem;
+    padding-top: 0%;
+}
+
+#expSectionBody {
+    align-items: flex-start;
+    text-align: left;
+}
 
 /* projects */
