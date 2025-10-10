@@ -6,10 +6,18 @@ const Experience = () => {
 
     return (
         <div className="section">
-            <div className="sectionHeader">
+            <motion.div className="sectionHeader"
+            initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true }}>
                 <h2>experience_</h2>
-            </div>
-            <div className="sectionBody" id='expSectionBody'>
+            </motion.div>
+            <motion.div className="sectionBody" id='expSectionBody'
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true }}>
                 <div className="expList">
                     <ul>
                         <button className={`expButton ${activeTab === 'ALE' ? 'active' : ''}`} onClick={() => setActiveTab('ALE')}>
@@ -81,7 +89,7 @@ const Experience = () => {
                         </div>
                     )}
                 </div>
-            </div>
+            </motion.div>
         </div>
     )
 }

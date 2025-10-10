@@ -1,3 +1,6 @@
+import githubIcon from '../assets/img/github.png';
+import linkedinIcon from '../assets/img/linkedin.png';
+
 const Navbar = () => {
     return (
         <nav className="navbar">
@@ -7,13 +10,12 @@ const Navbar = () => {
                 <a href="#experience">Experience</a>
                 <a href="#projects">Projects</a>
             </div>
-            <span className="nav-divider"></span>
             <div className="nav-socials">
                 <a href="https://github.com/paolohoogland">
-                    <img src="../src/assets/img/github.png" alt="GitHub" />
+                    <img src={githubIcon} alt="GitHub" />
                 </a>
                 <a href="https://www.linkedin.com/in/paolohoogland/">
-                    <img src="../src/assets/img/linkedin.png" alt="LinkedIn" />
+                    <img src={linkedinIcon} alt="LinkedIn" />
                 </a>
             </div>
         </nav>

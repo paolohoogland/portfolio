@@ -78,7 +78,7 @@ p, li {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     padding: 1rem 2rem;
     z-index: 1000;
     box-sizing: border-box;
@@ -99,10 +99,6 @@ p, li {
 .nav-links a:hover {
     color: #a100f2;
 } 
-
-.nav-divider {
-    flex-grow: 1;
-}
 
 .nav-socials {
     display: flex;
