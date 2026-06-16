@@ -1,4 +1,5 @@
 import githubIcon from '../assets/img/github.png';
+import gitlabIcon from '../assets/img/gitlab.png';
 import linkedinIcon from '../assets/img/linkedin.png';
 
 const Navbar = () => {
@@ -13,6 +14,9 @@ const Navbar = () => {
             <div className="nav-socials">
                 <a href="https://github.com/paolohoogland">
                     <img src={githubIcon} alt="GitHub" />
+                </a>
+                <a href="https://gitlab.com/paolohoogland" target="_blank" rel="noreferrer">
+                    <img src={gitlabIcon} alt="GitLab" />
                 </a>
                 <a href="https://www.linkedin.com/in/paolohoogland/">
                     <img src={linkedinIcon} alt="LinkedIn" />
