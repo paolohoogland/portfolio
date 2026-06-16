@@ -43,10 +43,13 @@ const Experience = () => {
                                 initial={{ opacity: 0, y: 10 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8, ease: "easeOut" }}>
-                                    <li>Develop a tool to perform automatic load and chaos tests on the REST APIs developed for the Rainbow platform</li>
-                                    <li>Test the functionality of XMPP protocol implementations</li>
-                                    <li>Program a new Golang extension for the k6 load-testing tool</li>
-                                    <li>Automate performance tests and test report production</li>
+                                    <p>
+                                        Design and develop an internal performance and load-testing platform for Rainbow, Alcatel-Lucent Enterprise's cloud communications platform (messaging, voice, video). Own the tool end-to-end: architecture, development, and deployment, across 3+ years. Used by Backend, Frontend, and QA teams.
+                                    </p>
+                                    <li>Build a full-stack internal testing platform in Node.js / JavaScript to launch and monitor load and performance tests, with custom configuration, against Rainbow's REST APIs (using k6 and Grafana).</li>
+                                    <li>Add real-time tracking of every HTTP response and custom metric, plus data export and automated report generation.</li>
+                                    <li>Extend k6 with a custom Go (Golang) extension to test the XMPP protocol, enabling automated testing of real-time conversations and messaging.</li>
+                                    <li>Add Docker and Kubernetes support to run tests at scale and on demand</li>
                                 </motion.ul>
                             </div>
                         </div>
