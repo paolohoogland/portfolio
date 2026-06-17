@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import myPic from '../assets/img/yo.JPG';
 
 const About = () => {
     return (
@@ -20,7 +21,7 @@ const About = () => {
                     <p>I hold a Bachelor's degree in Computer Science with a specialization in Application Development: design, development, and testing, from <a href="https://iutrs.unistra.fr">IUT Robert Schuman</a> in Strasbourg. I am currently pursuing an engineering degree at the <a href="https://www.cnam-grandest.fr">National Conservatory of Arts and Crafts (CNAM)</a>, Strasbourg.</p>
                 </div>
                 <div id="myPic">
-                    <img src="../src/assets/img/yo.jpg" alt="Paolo Hoogland" />
+                    <img src={myPic} alt="Paolo Hoogland" />
                 </div>
             </motion.div>
         </div>
