@@ -45,6 +45,12 @@ const Navbar = () => {
                 <a href="https://www.linkedin.com/in/paolohoogland/" target="_blank" rel="noreferrer">
                     <img src={linkedinIcon} alt="LinkedIn" />
                 </a>
+                <a href="mailto:paolohoogland@gmail.com" aria-label="Email">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <rect x="2" y="4" width="20" height="16" rx="2"/>
+                        <polyline points="2,4 12,13 22,4"/>
+                    </svg>
+                </a>
             </div>
         </nav>
     );
