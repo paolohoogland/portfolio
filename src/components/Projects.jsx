@@ -34,6 +34,12 @@ const otherProjects = [
         tech: ["MicroPython", "ESP32-C6", "HTML", "CSS"],
         github: "https://github.com/paolohoogland/esp32c6_robot_zilina",
     },
+    {
+        title: "Portfolio",
+        description: "This portfolio's repository, built with React, Vite, and Framer Motion.",
+        tech: ["React", "Vite", "Framer Motion"],
+        github: "https://github.com/paolohoogland/portfolio",
+    },
 ];
 
 const slideVariants = {
