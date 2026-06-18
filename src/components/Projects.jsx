@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react';
 import { motion, AnimatePresence } from "framer-motion";
 import githubIcon from '../assets/img/github.png';
+import posImg from '../assets/img/pos.png';
 
 const featuredProjects = [
     {
@@ -8,6 +9,7 @@ const featuredProjects = [
         description: "Full-stack restaurant POS (Angular + NestJS + Prisma/PostgreSQL) in an Nx monorepo. It manages dishes, menus, ingredient recipes with a substitution system, and live stock tracking. Made with a rigorous testing culture including mutation and property-based testing.",
         tech: ["NestJS", "Angular", "Docker", "Gitlab CI/CD", "Prisma", "PostgreSQL", "TDD"],
         github: "https://gitlab.com/cnam-fip-2a-tests/projet-test-ci-pos",
+        image: posImg,
     },
     {
         title: "Sharp - Finger Detection",
@@ -88,17 +90,24 @@ const Projects = () => {
                             exit="exit"
                             transition={{ duration: 0.5, ease: "easeInOut" }}
                             className="carouselCard"
+                            style={project.image ? {
+                                backgroundImage: `linear-gradient(rgba(33, 22, 58, 0.88), rgba(33, 22, 58, 0.88)), url(${project.image})`,
+                                backgroundSize: 'cover',
+                                backgroundPosition: 'center',
+                            } : undefined}
                         >
-                            <div className="projectHeader">
+                            <div className="carouselContent">
                                 <h3>{project.title}</h3>
-                                <a href={project.github} target="_blank" rel="noreferrer">
-                                    <img src={githubIcon} alt="repository" />
-                                </a>
+                                <p className="carouselDescription">{project.description}</p>
+                                <div className="carouselFooter">
+                                    <ul className="projectTech">
+                                        {project.tech.map((t) => <li key={t}>{t}</li>)}
+                                    </ul>
+                                    <a href={project.github} target="_blank" rel="noreferrer">
+                                        <img src={githubIcon} alt="repository" />
+                                    </a>
+                                </div>
                             </div>
-                            <p>{project.description}</p>
-                            <ul className="projectTech">
-                                {project.tech.map((t) => <li key={t}>{t}</li>)}
-                            </ul>
                         </motion.div>
                     </AnimatePresence>
                 </div>

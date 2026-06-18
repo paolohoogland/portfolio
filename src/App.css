@@ -202,9 +202,9 @@ p, li {
 .projectsGrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
+    gap: 1rem;
     width: 100%;
-    margin-top: 2rem;
+    margin-top: 1.2rem;
 }
 
 .projectCard {
@@ -213,8 +213,12 @@ p, li {
     background-color: #1a122b;
     border: 2px solid #a100f2;
     border-radius: 12px;
-    padding: 1.5rem;
+    padding: 1.2rem;
     transition: all 0.3s ease;
+}
+
+.projectCard h3 {
+    font-size: 1.1rem;
 }
 
 .projectCard:hover {
@@ -246,13 +250,43 @@ p, li {
     border: 2px solid #b55aff;
     border-radius: 12px;
     padding: 2.5rem;
-    min-height: 220px;
+    min-height: 440px;
     text-align: left;
+}
+
+.carouselCard h3 {
+    font-size: 1.3rem;
 }
 
 .carouselCard p {
     text-align: left;
+    font-size: 1rem;
     margin-bottom: 1rem;
+}
+
+.carouselContent {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.carouselFooter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.carouselContent .projectTech {
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+.carouselDescription {
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
 .carouselBtn {
@@ -318,25 +352,26 @@ p, li {
 
 .projectCard p {
     text-align: left;
-    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    margin-bottom: 0.7rem;
 }
 
 .projectTech {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.4rem;
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
 .projectTech li {
-    font-size: 0.85rem;
+    font-size: 0.7rem;
     margin-bottom: 0;
     color: #b55aff;
     border: 1px solid #a100f2;
     border-radius: 8px;
-    padding: 0.2rem 0.6rem;
+    padding: 0.15rem 0.5rem;
 }
 
 /* hamburger — hidden on desktop */
