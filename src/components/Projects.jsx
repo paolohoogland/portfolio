@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { motion, AnimatePresence } from "framer-motion";
 import githubIcon from '../assets/img/github.png';
 
@@ -41,10 +41,22 @@ const slideVariants = {
 const Projects = () => {
     const [index, setIndex] = useState(0);
     const [direction, setDirection] = useState(1);
+    const touchStartX = useRef(null);
 
     const paginate = (dir) => {
         setDirection(dir);
         setIndex((prev) => (prev + dir + featuredProjects.length) % featuredProjects.length);
+    };
+
+    const handleTouchStart = (e) => {
+        touchStartX.current = e.touches[0].clientX;
+    };
+
+    const handleTouchEnd = (e) => {
+        if (touchStartX.current === null) return;
+        const diff = touchStartX.current - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 50) paginate(diff > 0 ? 1 : -1);
+        touchStartX.current = null;
     };
 
     const project = featuredProjects[index];
@@ -65,7 +77,7 @@ const Projects = () => {
                 transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
                 viewport={{ once: true }}>
                 <button className="carouselBtn prev" onClick={() => paginate(-1)}>&#8592;</button>
-                <div className="carouselSlider">
+                <div className="carouselSlider" onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
                     <AnimatePresence mode="wait" custom={direction}>
                         <motion.div
                             key={index}
@@ -91,6 +103,7 @@ const Projects = () => {
                     </AnimatePresence>
                 </div>
                 <button className="carouselBtn next" onClick={() => paginate(1)}>&#8594;</button>
+                <div className="swipeHint">&#8592; swipe &#8594;</div>
                 <div className="carouselDots">
                     {featuredProjects.map((_, i) => (
                         <span

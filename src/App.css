@@ -338,3 +338,182 @@ p, li {
     border-radius: 8px;
     padding: 0.2rem 0.6rem;
 }
+
+/* hamburger — hidden on desktop */
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.3rem;
+}
+
+.hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+.nav-mobile {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #0f0b1a;
+    padding: 1rem 2rem;
+    gap: 1.2rem;
+    border-top: 1px solid #a100f2;
+    z-index: 999;
+}
+
+.nav-mobile a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.nav-mobile a:hover {
+    color: #a100f2;
+}
+
+/* responsive */
+
+/* swipe hint — hidden on desktop */
+.swipeHint {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    section {
+        max-width: 90%;
+    }
+
+    /* intro */
+    .sectionHeader h1 {
+        font-size: 2.2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.2rem;
+    }
+
+    .sectionBody {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
+    p, li {
+        font-size: 0.95rem;
+    }
+
+    /* navbar */
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    /* about */
+    #info {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    /* experience */
+    #expSectionBody {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .expList {
+        flex: none;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .expList ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        padding: 0;
+    }
+
+    .expButton {
+        width: auto;
+        font-size: 0.85rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .expDetails {
+        flex: none;
+        width: 100%;
+    }
+
+    .expDetails li {
+        font-size: 0.85rem;
+    }
+
+    /* carousel — bigger, swipeable */
+    .carouselBtn {
+        display: none;
+    }
+
+    .carouselCard {
+        padding: 1.8rem;
+        min-height: 280px;
+    }
+
+    .carouselCard h3 {
+        font-size: 1.3rem;
+    }
+
+    .carouselCard p {
+        font-size: 1rem;
+    }
+
+    .swipeHint {
+        display: flex;
+        color: #b55aff;
+        font-size: 0.8rem;
+        opacity: 0.7;
+        margin-top: 0.5rem;
+        letter-spacing: 0.05em;
+    }
+
+    /* small project cards — visually lighter than carousel */
+    .projectsGrid {
+        grid-template-columns: 1fr;
+        margin-top: 1.5rem;
+    }
+
+    .projectCard {
+        padding: 1rem;
+    }
+
+    .projectCard h3 {
+        font-size: 1rem;
+    }
+
+    .projectCard p {
+        font-size: 0.85rem;
+    }
+}
