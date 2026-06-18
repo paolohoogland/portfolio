@@ -284,7 +284,7 @@ p, li {
     margin-bottom: 0;
 }
 
-.carouselDescription {
+.carouselCard p.carouselDescription {
     margin-bottom: 1rem;
     text-align: center;
 }

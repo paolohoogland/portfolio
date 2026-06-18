@@ -2,6 +2,7 @@ import { useState, useRef } from 'react';
 import { motion, AnimatePresence } from "framer-motion";
 import githubIcon from '../assets/img/github.png';
 import posImg from '../assets/img/pos.png';
+import sharpImg from '../assets/img/sharp.JPG';
 
 const featuredProjects = [
     {
@@ -16,6 +17,7 @@ const featuredProjects = [
         description: "Real-time finger-counting web app powered by a custom YOLO model, with a full MLOps pipeline (automated training, mAP-gated model promotion, MLflow tracking, and Dockerized CI/CD deployment).",
         tech: ["Python", "YOLOv8", "OpenCV", "MLflow", "Docker", "CI/CD"],
         github: "https://gitlab.com/cnam_tom_prieto/sharp",
+        image: sharpImg,
     },
 ];
 
