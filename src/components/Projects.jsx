@@ -1,8 +1,12 @@
 import { useState, useRef } from 'react';
 import { motion, AnimatePresence } from "framer-motion";
 import githubIcon from '../assets/img/github.png';
+import gitlabIcon from '../assets/img/gitlab.png';
 import posImg from '../assets/img/pos.png';
 import sharpImg from '../assets/img/sharp.JPG';
+
+const repoIcon = (url) => url.includes('gitlab.com') ? gitlabIcon : githubIcon;
+const repoName = (url) => url.includes('gitlab.com') ? 'GitLab repository' : 'GitHub repository';
 
 const featuredProjects = [
     {
@@ -112,7 +116,7 @@ const Projects = () => {
                                         {project.tech.map((t) => <li key={t}>{t}</li>)}
                                     </ul>
                                     <a href={project.github} target="_blank" rel="noreferrer">
-                                        <img src={githubIcon} alt="repository" />
+                                        <img src={repoIcon(project.github)} alt={repoName(project.github)} />
                                     </a>
                                 </div>
                             </div>
@@ -142,7 +146,7 @@ const Projects = () => {
                         <div className="projectHeader">
                             <h3>{p.title}</h3>
                             <a href={p.github} target="_blank" rel="noreferrer">
-                                <img src={githubIcon} alt="repository" />
+                                <img src={repoIcon(p.github)} alt={repoName(p.github)} />
                             </a>
                         </div>
                         <p>{p.description}</p>
