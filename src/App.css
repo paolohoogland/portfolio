@@ -83,7 +83,6 @@ p, li {
     padding: 1rem 2rem;
     z-index: 1000;
     box-sizing: border-box;
-    overflow-x: hidden;
     background-color: #0f0b1a;
 }
 
